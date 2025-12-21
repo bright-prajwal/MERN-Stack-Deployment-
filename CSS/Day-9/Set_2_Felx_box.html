@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      #container {
+        width: 80%;
+        height: 600px;
+        background-color: azure;
+        margin: 10px auto;
+        border: 2px solid black;
+
+        /* Display Flex Box */
+        display: flex;
+
+        /* Direction */
+        flex-direction: row;
+        /* flex-direction: column; */
+
+        /* Justify Content */
+        justify-content: flex-start;
+        /* justify-content: flex-end; */
+        /* justify-content: center; */
+
+        /* Flex Wrap */
+
+        /* flex-wrap: nowrap; */
+        flex-wrap: wrap;
+        /* flex-wrap: wrap-reverse; */
+
+        /* Align Items */
+        /* align-items: flex-start;*/
+        /* aling-items:flex-end */
+        /* align-items:center; */
+        /* align-items: baseline; */
+
+        /* Base */
+
+        /* Align Content */
+        /* align-content: flex-end; */
+        align-content: flex-start;
+        /* align-content: center; */
+
+        /* align-content: space-around; */
+        /* align-content:space-between; */
+        /* align-content: space-evenly; */
+
+        /* Flex Sizing */
+      }
+      #org {
+        align-self: flex-start;
+        /* Flex-sizing */
+        /* flex-basis: 50px; */
+        flex-grow: 2;
+      }
+      #blue {
+        align-self: flex-start;
+
+        flex-grow: 1;
+      }
+      #red {
+        flex-grow: 1;
+      }
+      h1 {
+        text-align: center;
+      }
+
+      #container div {
+        height: 100px;
+        width: 50px;
+
+        color: white;
+        text-align: center;
+        font-size: 2;
+
+        /* border-radius: 10px; */
+        border: 2px solid black;
+        display: inline;
+        padding: 10px;
+        /* margin-top: 10px; */
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>FlexBox Playground</h1>
+    <div id="container">
+      <div style="background-color: violet">violet</div>
+      <div style="background-color: indigo">indigo</div>
+      <div id="blue" style="background-color: blue; height: 75px">blue</div>
+      <div style="background-color: green">green</div>
+      <div style="background-color: yellow">yellow</div>
+      <div id="org" style="background-color: orange; height: 200px">orange</div>
+      <div id="red" style="background-color: red">red</div>
+    </div>
+  </body>
+</html>

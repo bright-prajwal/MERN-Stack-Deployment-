@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        margin: 0px;
+        padding: 0px;
+
+        height: 100pv;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+
+        grid-gap: 5px;
+
+        /* place-items:center; */
+      }
+      .container div {
+        background-color: pink;
+        font-size: 1.5rem;
+      }
+
+      #fel {
+        /* grid-column: 1 / span 12; */
+        grid-column-start: 1;
+        grid-column-end: 15;
+      }
+
+      #sidebar {
+        grid-column: 1 / span 3;
+        grid-row: 2 / span 10;
+      }
+
+      #nav {
+        grid-column: 4 / span 6;
+      }
+                                            
+      #ads {
+        grid-column: 10 / span 3;
+        grid-row: 2 / span 10;
+      }
+
+      #main {
+        grid-column: 4 / span 6;
+        grid-row: 3 / span 9;
+      }
+
+      #footer {
+        grid-column: 1 / span 12;
+      }
+
+      @media (min-width:20px) and (max-width:400px) {
+
+        #container{
+          display: flex;
+        flex-wrap: wrap;
+        }
+
+        
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="fel">header</div>
+      <div id="nav">navigation</div>
+      <div id="main">main</div>
+      <div id="sidebar">sidebar</div>
+      <div id="ads">ads</div>
+      <div id="footer">footer</div>
+    </div>
+  </body>
+</html>

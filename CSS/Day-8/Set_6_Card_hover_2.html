@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .card {
+        width: 400px;
+
+        border: 2px solid black;
+
+        border-radius: 10px;
+        margin: 10px;
+        padding: 10px;
+
+        box-shadow: 0 2px 5px black;
+        transition: 1s;
+      }
+      .card:hover {
+        box-shadow: 0 6px 10px purple;
+      }
+
+      img {
+        width: 100%;
+
+        border-radius: 10px 10px 0 0;
+      }
+      #Portfolio {
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      @media (min-width: 20px) and (max-width: 450px) {
+        #Portfolio {
+          flex-wrap: wrap;
+        }
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="Portfolio">
+      <div class="card">
+        <img src="9f.jpg" alt="" />
+        <h3>Neha Kadam</h3>
+        <a href="">Software Engineer</a>
+      </div>
+      <div class="card">
+        <img src="8f.jpg" alt="" />
+        <h3>Prerana Hon</h3>
+        <a href="">Data Analyst</a>
+      </div>
+    </div>
+  </body>
+</html>

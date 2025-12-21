@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      section {
+        margin: 0 auto;
+        margin-top: 100px;
+      }
+      div {
+        margin: 0 auto;
+        width: 200px;
+        height: 50px;
+        text-align: center;
+        background-color: #76a874;
+        border: 2px solid black;
+        margin: 60px auto;
+      }
+      div:nth-of-type(2n) {
+        background-color: gold;
+      }
+      div:nth-of-type(3n) {
+        background-color: #ebb02d;
+      }
+      /* Transform */
+      #first {
+        /* Rotate */
+        transform: rotate(45deg);
+      }
+      #two {
+        /* Scale propertie */
+        /* transform: scale(0.5,2); */
+        transform: scaleX(2);
+        transform: scaleY(1.5);
+      }
+      #three {
+        /* Translate Porpertie */
+        transform: translate(-100px);
+      }
+      #four {
+        transform: skew(-30deg);
+      }
+      #five {
+        transform: rotate(30deg) translateX(150px) scale(2, 1.5) skew(30deg);
+      }
+    </style>
+    <title>CSS Transform</title>
+  </head>
+  <body>
+    <section>
+      <div id="first">1</div>
+      <div id="two">2</div>
+      <div id="three">3</div>
+      <div id="four">4</div>
+      <div id="five">5</div>
+    </section>
+  </body>
+</html>
