@@ -36,6 +36,7 @@ async function getFacts() {
         console.log(data)
     } catch (err) {
 
+        console.log(err)
     }
 
 }
