@@ -148,16 +148,15 @@ app.get("/user/:id/delete", (req, res) => {
 
 app.delete("/user/:id", (req, res) => {
   let { id } = req.params;
-  let { password: formPass, username: newUsername } = req.body;
+  let { password: formPass, username: formUsername } = req.body;
 
   let q = `select * from user where id='${id}'`;
-
   try {
     connection.query(q, (err, result) => {
       if (err) throw err;
       let user = result[0];
 
-      if (formPass != user.password && password != user.password) {
+      if (formPass != user.password || formUsername != user.username) {
         res.send("Wrong Username and Password");
       } else {
         let q1 = `DELETE FROM user WHERE id='${id}'`;
