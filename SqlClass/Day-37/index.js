@@ -128,6 +128,30 @@ app.patch("/user/:id", (req, res) => {
   }
 });
 
+//Add user Route
+app.get("/user/newUser", (req, res) => {
+  res.render("newUser.ejs");
+});
+
+app.post("/user", (req, res) => {
+  let { username, email, password } = req.body;
+  let id = uuidv4();
+  
+  let data=[id,username,email,password]
+
+  let q = "insert into user (id, username, email, password) values (?,?,?,?)";
+  try {
+    connection.query(q, data,(err, result) => {
+      if (err) throw err;
+      console.log(result)
+      res.redirect("/user");
+    });
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+//delete user Route
 app.get("/user/:id/delete", (req, res) => {
   let { id } = req.params;
   //   res.render("edit.ejs");

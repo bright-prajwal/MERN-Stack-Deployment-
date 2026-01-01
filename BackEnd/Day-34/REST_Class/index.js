@@ -41,6 +41,8 @@ app.get("/posts/new", (req, res) => {
   res.render("new.ejs");
 });
 
+
+
 app.post("/posts", (req, res) => {
   let { username, content } = req.body;
   let id = uuidv4();
